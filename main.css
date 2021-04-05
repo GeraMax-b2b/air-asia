@@ -1,20 +1,22 @@
 body {
-  font-family: "Open Sans", Helvetica, sans-serif;
-  font-weight: 300;
-  color: #fff;
-  font-size: 16px;
-  line-height: 1.42;
-  background: #29292c;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-image: url(./img/elephant.png);
-  background-repeat: no-repeat;
-  background-position: top center;
+  font-family: "Open Sans", Helvetica, sans-serif;  
+  color: #fff;  
+  background: #29292c; 
+  background-image: url(./img/elephant.png), url(./img/2.png);;
+  background-repeat: no-repeat, no-repeat;
+  background-position: top center; right bottom: 165px;;
   background-size: contain;
+}
+  
 }
 
 a{
-  color: inherit;
+  color: #fff; 
+  text-decoration: none;
+
+}
+.menu__item a:hover{
+  color: red;
 }
 
 ul {
@@ -24,7 +26,7 @@ ul {
 ul li {
   list-style: none;
 }
-h1,h2,h3,h4,h5,h6 {
+h1,h2,h3,h4,h5,h6,p {
   margin: 0;
   font-weight: normal;
 }
@@ -32,40 +34,85 @@ h1,h2,h3,h4,h5,h6 {
 * {
    box-sizing: border-box;
 }
-.container{
+
+
+ .container{
   margin: 0 auto;
-   width: 1140px;
+  width: 1140px;
+  position: relative;
 }
- .header {
-    height: 120px;
-    position: relative;
-    margin-bottom: 156px;
+
+.hero__container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;    
+}
+
+.main__page--wrapper{
+}
+.wrapper__content{
+  width: 1143px;
+  margin: 0 auto;
+}
+.header{
+   position: relative;
+   height: 150px;  
+   margin-bottom: 45px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
  }
 
- .logo{
+.header__part{
+  display: flex;
+  align-items: center;
+}
+
+.header__part header__part--align--right{
+  justify-content: flex-end;
+}
+
+.logo{
    display: block;
-   position: relative
-   top: 44px;  top: 57px;
-   left: 0;
  }
 
  .menu {
-   position: absolute;
-   top: 47px;
-   left: 261px;
+   font-size: 14px;
+   color: #fff;
  }
 
+ .menu__item{
+  display: inline-block;
+  margin-right: 52px;
+  
+}
+ 
+.menu__item:last-child{
+    margin-right: 0;
+}
+
+.menu__link{
+  display: flex;
+  font-size: 14px;
+  text-decoration: none;
+  color: #fff;
+  margin-left: 30px;
+}
+ 
  .contacts {
-  position: absolute;
-  top: 30px;
-  right: 0;
   font-style: normal;   
   text-align: right;
 }
-.contacts_phone{
+.contacts__phone{
   text-decoration: none;
   font-size: 26px;
-  margin-bottom: 4px;
+  line-height: 1.1;
+  color: #fff;
+}
+
+.contacts__info{
+  font-size: 13px;
+  text-decoration: underline; 
 }
 .contacts__dropdown-title{
 font-size: 13px;
@@ -73,61 +120,28 @@ text-decoration: underline;
  
 }
 
- .contacts__desk {
-   color: #999;
-   font-size: 11px;
+.contacts__desk {
+  color: #9a9a9a;
+  font-size: 11px;
  }
-
-.menu_list{
-  display: block;
-}
-.menu_item{
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 50px;
-}
-.menu_item--active :link{
-  color: hsl(234, 92%, 59%);    
-}
-
-.menu_item:last-child{
-    margin-right: 0;
-}
-
-
-
-.menu_link{
-  font-size: 14px;
-  text-decoration: none;
-}
-
-.menu_link :hover {
-  color: #dfb56d;
-}
-
-
-.hero__text-section {
-width: 400px;
-height: 144px;
-
+ .hero__text-section {
+  width: 38%;
 }
 
 .hero-title{
-  font-size: 48px;
+  font-size: 72px;
   font-weight: bold;
-  line-height: 1.2;
-  margin-bottom: 18px;
+  line-height: 98px;
+  margin-bottom: 18px; 
 }
-
+ 
 .hero__subtitle{
-  font-size: 18px;
-  color: #dfb56d; 
-  margin-bottom: 44px;
+  font-size: 14px;
+  margin-bottom: 44px;  
 }
-
 .btn{
   background: #F5170E;
-  border-radius: 50px;
+  border-radius: 35px;
   padding: 17px 38px;
   color: #fff;
   font-weight: bold;
@@ -142,23 +156,27 @@ box-shadow: 0 0 25px 0 rgba(223, 181, 109, .15);
 }
 
 .section{
-   margin-bottom: 138px;
+margin-bottom: 138px;
 }
 
 .section__title{
   font-size: 36px;
   font-weight: bold;
-  margin-bottom: 45px;
+  margin-bottom: 53px;
+}
+
+.tours{
+  display: flex;
+  justify-content: space-between;
 }
 
 .tours__item{
   min-height: 470px;
   background: #fff;
-  border-radius: 4px;
-  display: inline-block;
-  margin-right: 22px;
+  border-radius: 4px;  
   width: 362px;
   color: #010001;
+  overflow: hidden;
 }
 
 .tours__item:last-child{
@@ -174,20 +192,19 @@ margin-right: 0;
 
 .tours__cover{
 display: block;
-
-
+height: 144px;
 }
 
 
 .tours__content {
-padding: 36px 30 px; 
+padding: 36px 30px; 
 
 }
 
 .tours__title {
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 30px;
+  margin-bottom: 33px;
 }
 
 .tours__iconed-title{
@@ -195,6 +212,7 @@ padding: 36px 30 px;
   vertical-align: top;
   width: 115px;
   margin-right: 30px;
+  font-size: 16px;
 }
 
 .tours__item:last-child {
@@ -205,54 +223,42 @@ padding: 36px 30 px;
   font-size: 36px;
   display: inline-block;
 }
+ 
 
 .tours__btn-wrapper{
-  text-align: center;
+display: flex;
+justify-content: center;
 }
+ 
 
-.news__item_action__item_super{
-  width: 555px;
-  display: inline-block;
-  vertical-align: top;
+.single-news{
   position: relative;
   border-radius: 4px;
   overflow: hidden;
 }
+ 
+  
+ 
 
-.news__cover{
+.single-news__date{
+  font-size: 15px;
+  margin-bottom: 13px;
+  text-transform: lowercase;
   display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: .4;
 }
 
-.news__date{
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
 
-.news{
-  margin-bottom: 55px;
-}
-
-.pager{
+ .pager{
+  display: flex;
+  justify-content: center;
   text-align: center;
 }
 
 .pager__display{
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 26px;
+  margin-right: 19px;
 }
 
-.pager__list{
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.pager__item{
+ .pager__item{
   display: inline-block;
   vertical-align: middle;
 }
@@ -265,6 +271,7 @@ padding: 36px 30 px;
   text-decoration: none;
   font-weight: bold;
   line-height: 32px;
+  color: #fff;
 }
 
 .about:before{
@@ -275,31 +282,32 @@ padding: 36px 30 px;
   background-image: url("./img/gates.png");
   background-size: cover;
   background-position: center;
-
+  
 }
 .footer {
-  height: 152px;
+   
+  height: 150px;
   position: relative;
 }
 
 .socials {
-  top: 53px;
-  margin-right: 10px;
-}
+  display: inline flex;
 }
 
 .socials__item {
-  display:inline-block;
+  display: inline-block;
   vertical-align: middle;
   margin-right: 10px;
 }
-
-.socials__link {
+.socials__item:last-child{
+  margin-right: 0;
+}
+.socials__icon {
   display: block;
   text-decoration: none;
   width: 36px;
   height: 36px;
-  display:inline-block;
-  vertical-align: middle;
-
+  border-radius: 50%;
+   
 }
+
