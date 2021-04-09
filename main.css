@@ -2,12 +2,10 @@ body {
   font-family: "Open Sans", Helvetica, sans-serif;  
   color: #fff;  
   background: #29292c; 
-  background-image: url(./img/elephant.png), url(./img/2.png);;
-  background-repeat: no-repeat, no-repeat;
-  background-position: top center; right bottom: 165px;;
-  background-size: contain;
-}
-  
+  background-image: url(./img/elephant.png), url(./img/2.png);
+  background-repeat: no-repeat;
+  background-position: top center, bottom center;
+  background-size: contain; 
 }
 
 a{
@@ -49,6 +47,7 @@ h1,h2,h3,h4,h5,h6,p {
 }
 
 .main__page--wrapper{
+ 
 }
 .wrapper__content{
   width: 1143px;
@@ -56,8 +55,8 @@ h1,h2,h3,h4,h5,h6,p {
 }
 .header{
    
-   height: 150px;  
-   margin-bottom: 45px;
+   height: 100px;  
+    
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -69,8 +68,9 @@ h1,h2,h3,h4,h5,h6,p {
 }
 
 .header__part header__part--align--right{
+  display: flex;
   justify-content: flex-end;
-}
+ }
 
 .logo{
    display: block;
@@ -88,7 +88,7 @@ h1,h2,h3,h4,h5,h6,p {
 }
  
 .menu__item:last-child{
-    margin-right: 0;
+ margin-right: 0;
 }
 
 .menu__link{
@@ -124,15 +124,22 @@ text-decoration: underline;
   color: #9a9a9a;
   font-size: 11px;
  }
- .hero__text-section {
-  width: 38%;
+
+ 
+.hero__text-section {
+  width: 52%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  vertical-align: top;
 }
 
-.hero-title{
+.hero__title{
   font-size: 72px;
   font-weight: bold;
   line-height: 98px;
   margin-bottom: 18px; 
+  margin-top: 0px;
 }
  
 .hero__subtitle{
@@ -162,9 +169,9 @@ margin-bottom: 138px;
 .section__title{
   font-size: 36px;
   font-weight: bold;
-  margin-bottom: 53px;
+  margin: 30px 0 53px auto;
 }
-
+ 
 .tours{
   display: flex;
   justify-content: space-between;
@@ -177,6 +184,9 @@ margin-bottom: 138px;
   width: 362px;
   color: #010001;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
 }
 
 .tours__item:last-child{
@@ -188,10 +198,12 @@ margin-right: 0;
   min-height: 162px;
   margin-bottom: 45px; 
   position: relative;
+  flex: 1 1 auto;
 }
 
 .tours__cover{
-display: block;
+display: flex;
+justify-content: stretch;
 height: 144px;
 }
 
@@ -205,12 +217,15 @@ padding: 36px 30px;
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 33px;
+  padding: 40px 0 0 20px;
 }
 
 .tours__iconed-title{
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between ;
   vertical-align: top;
-  width: 115px;
+  width: 50%;
   margin-right: 30px;
   font-size: 16px;
 }
@@ -221,31 +236,50 @@ padding: 36px 30px;
 
 .tours__iconed {
   font-size: 36px;
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+}
+.tours__discription {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+   
 }
  
-
 .tours__btn-wrapper{
 display: flex;
 justify-content: center;
 }
  
+ /* Дешевые путевки на Новый Год! */
 
-.single-news{
-  position: relative;
-  border-radius: 4px;
-  overflow: hidden;
+.news__discription{
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
 }
- 
-  
- 
 
+ .news-tour__list{
+  display: flex;
+  justify-content: space-between;
+ }
+ .news__item single-news{
+  display: flex;
+  justify-content: space-between;
+}
+
+.single-news__title{
+  font-weight: bold;
+  font-size: 24px;
+}
+   
 .single-news__date{
   font-size: 15px;
   margin-bottom: 13px;
   text-transform: lowercase;
-  display: block;
-}
+  }
+
+
 
 
  .pager{
@@ -275,24 +309,18 @@ justify-content: center;
 }
 
 .news__title-small{
-  margin-bottom: 50px;
+  margin: 30px 0 0 40px;
   font-size: 36px;
   font-weight: bold;
 }
-.news{
-  margin-bottom: 51px;
+
+.news-tour__list{
   display: flex;
-  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  
 }
-.news__discription {
-  width: 555px;
-  vertical-align: top;
-  position: relative;
-}
-.news__item:last-child{
-margin-right: 0;
-}
-.news__item:single-news{
+.single-news__cover{
   width: 100%;
   height: 100%;
   display: inline-flex;
@@ -301,8 +329,18 @@ margin-right: 0;
   overflow: hidden;
 }
 
-
-
+.about__desk{
+  width: 60%;
+  height: 100%;
+  background-image: url(./img/mountains.png);
+  background-position: center;
+  margin: -400px 0 0 auto;
+  position: relative;
+  z-index: 100;
+  padding: 11px;
+  color: black;
+  border-radius: 5px;
+}
 
 
 .about:before{
@@ -322,6 +360,7 @@ margin-right: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 60px;
 }
 
 .socials {
