@@ -64,7 +64,10 @@
 
     <section class="section">
       <div class="container">
-        <h2 class="section__title">Горящие туры</h2>
+        <h2 class="section__title">
+          Горящие туры
+          <img src="./img/flame.png" alt="section-img" class="section-title__icon">
+        </h2>
         <ul class="tours">
           <li class="tours__item">
             <div class="tours__header">
@@ -89,7 +92,7 @@
               </div>
             </div>
               <div class="tours__btn-wrapper">
-                <a href="/" class="btn">СМОТРЕТЬ</a>
+                <a href="/" class="btn-wrapper">СМОТРЕТЬ</a>
               </div>            
           </li>
 
@@ -118,7 +121,7 @@
               </div>
             </div>
             <div class="tours__btn-wrapper">
-              <a href="/" class="btn">СМОТРЕТЬ</a>
+              <a href="/" class="btn-wrapper">СМОТРЕТЬ</a>
             </div>
           </li>
 
@@ -147,7 +150,7 @@
               </div>
             </div>
               <div class="tours__btn-wrapper">
-                <a href="/" class="btn">СМОТРЕТЬ</a>
+                <a href="/" class="btn-wrapper">СМОТРЕТЬ</a>
               </div>
           </li>
         </ul>
@@ -157,49 +160,56 @@
     <!-- Секция  _ Новости  и акции  -->
 
     <section class="section">
+      <div class="container">
       <div class="news">
         <h2 class="news__title-small">Новости и акции</h2>
-      </div>
+      
       <div class="news__discription">
         <ul class="news-tour__list">
-          <li class="news__item single-news">
-            <div class="single-news__cover" style="background-image: url(./img/plain.png);">
-            <div class="single-news__text-content">  
-              <time datetime="2019-12-09" class="single-news__date">Декабрь 2019</time>
-              <div class="single-news__title">Дешевые путевки на Новый Год!</div>
-              <div class="single-news__desk">Проведи новый год в Тайланде</div>
-            </div>
+          <li class="news__item">
+            <div class="single-news">
+              <div class="single-news__cover" style="background-image: url(./img/plain.png);">
+                <div class="single-news__text-content">  
+                  <time datetime="2019-12-09" class="single-news__date">Декабрь 2019</time>
+                  <div class="single-news__title">Дешевые путевки на Новый Год!</div>
+                  <div class="single-news__desk">Проведи новый год в Тайланде</div>
+                </div>
+              </div>
             </div>
           </li>
-          <li class="news__item single-news">
-            <div class="single-news__text-content">
+          <li class="news__item ">
+            <div class="single-news">
               <div class="single-news__cover" style="background-image: url(./img/Surfer.png);">
-              <time datetime="2019-12-09" class="single-news__date">Декабрь 2019</time>
-              <div class="single-news__title">Акция для серфенгистов!</div>
-              <div class="single-news__desk">В сезон больших волн скидка на путевку в Тайланд
-                на остров серфингистов. Удачного пути!</div>
+                <div class="single-news__text-content">  
+                  <time datetime="2019-12-09" class="single-news__date">Декабрь 2019</time>
+                  <div class="single-news__title">Акция для серфенгистов!</div>
+                  <div class="single-news__desk">В сезон больших волн скидка на путевку в Тайланд
+                    на остров серфингистов. Удачного пути!
+                  </div>
+                </div>
               </div>
             </div>
           </li>
         </ul>
       </div>
 
-      <div class="pager"></div>
-      <div class="pager__display">
-        Страница <span class="pager_index">1</span>из<span class="pager_count">7</span>
+      <div class="pager">
+        <div class="pager__display">
+          Страница <span class="pager_index">1</span>из<span class="pager_count">7</span>
+        </div>
+        <ul class="pager__list">
+          <li class="pager__item  pager menu__item--active">
+            <a href="#" class="pager__link" style="line-height: 32px;">1</a>
+          </li>
+          <li class="pager__item"><a href="#" class="pager__link">2</a></li>
+          <li class="pager__item"><a href="#" class="pager__link">3</a></li>
+          <li class="pager__item"><a href="#" class="pager__link">4</a></li>
+          <li class="pager__item"><a href="#" class="pager__link">5</a></li>
+          <li class="pager__item"><a href="#" class="pager__link">6</a></li>
+          <li class="pager__item"><a href="#" class="pager__link">7</a></li>
+        </ul>
       </div>
-      <ul class="pager__list">
-        <li class="pager__item  pager menu__item--active">
-          <a href="#" class="pager__link" style="
-                line-height: 32px;">1</a>
-        </li>
-        <li class="pager__item"><a href="#" class="pager__link">2</a></li>
-        <li class="pager__item"><a href="#" class="pager__link">3</a></li>
-        <li class="pager__item"><a href="#" class="pager__link">4</a></li>
-        <li class="pager__item"><a href="#" class="pager__link">5</a></li>
-        <li class="pager__item"><a href="#" class="pager__link">6</a></li>
-        <li class="pager__item"><a href="#" class="pager__link">7</a></li>
-      </ul>
+    </div>
     </section>
 
     <!-- Секция  _ О нас  -->

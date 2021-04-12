@@ -1,7 +1,7 @@
 body {
   font-family: "Open Sans", Helvetica, sans-serif;  
   color: #fff;  
-  background: #29292c; 
+  background: #001821; 
   background-image: url(./img/elephant.png), url(./img/2.png);
   background-repeat: no-repeat;
   background-position: top center, bottom center;
@@ -171,6 +171,11 @@ margin-bottom: 138px;
   font-weight: bold;
   margin: 30px 0 53px auto;
 }
+.section-title__icon{
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+}
  
 .tours{
   display: flex;
@@ -227,6 +232,7 @@ padding: 36px 30px;
   vertical-align: top;
   width: 50%;
   margin-right: 30px;
+  margin-left: 20px;
   font-size: 16px;
 }
 
@@ -243,16 +249,23 @@ padding: 36px 30px;
   margin-top: 20px;
   margin-left: 20px;
   margin-right: 20px;
-   
 }
  
-.tours__btn-wrapper{
-display: flex;
-justify-content: center;
+ .btn-wrapper{
+ background: #Fff;
+ border-radius: 35px;
+ padding: 17px 44px;
+ color: #F5170E;
+ font-weight: bold;
+ text-transform: uppercase;
+ text-decoration: none;
+ display: inline-block;
+ border: 1px;
+ border-color: #f00;
 }
- 
  /* Дешевые путевки на Новый Год! */
-
+ 
+ 
 .news__discription{
   display: inline-flex;
   width: 100%;
@@ -262,12 +275,22 @@ justify-content: center;
  .news-tour__list{
   display: flex;
   justify-content: space-between;
+  margin: 0 -12px;
  }
- .news__item single-news{
-  display: flex;
-  justify-content: space-between;
-}
 
+ .news__item {
+   padding: 0 12px;
+   width: 50%;
+  display: flex;
+}
+.single-news {
+  width: 100%;
+  flex:1 1 auto;
+  display: flex;
+  position: relative;
+  z-index: 1;
+  min-height: 394px;
+}
 .single-news__title{
   font-weight: bold;
   font-size: 24px;
@@ -289,18 +312,29 @@ justify-content: center;
 }
 
 .pager__display{
-  margin-right: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 10px;
 }
 
+.pager__list{
+  display: flex;
+  justify-content: space-between;
+  
+}
  .pager__item{
-  display: inline-block;
-  vertical-align: middle;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
 }
  
 .pager__link{
   display: block;
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
+  justify-content: space-between; 
+  align-items: center;
   border-radius: 50%;
   text-decoration: none;
   font-weight: bold;
@@ -309,7 +343,7 @@ justify-content: center;
 }
 
 .news__title-small{
-  margin: 30px 0 0 40px;
+  margin: 30px 0 53px auto;
   font-size: 36px;
   font-weight: bold;
 }
@@ -323,12 +357,17 @@ justify-content: center;
 .single-news__cover{
   width: 100%;
   height: 100%;
-  display: inline-flex;
+  display: flex;
   object-fit: cover;
   border-radius: 5px;
   overflow: hidden;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px 26px;
 }
-
+.single-news__desk {
+  min-height: 49px;
+}
 .about__desk{
   width: 60%;
   height: 100%;
@@ -337,11 +376,17 @@ justify-content: center;
   margin: -400px 0 0 auto;
   position: relative;
   z-index: 100;
-  padding: 11px;
+  padding: 60px;
   color: black;
   border-radius: 5px;
+  
 }
-
+.about__title{
+  padding:  81px 70px;
+  font-weight: bold;
+  font-size: 36px;
+}
+ 
 
 .about:before{
   content: "";
@@ -350,8 +395,10 @@ justify-content: center;
   height: 502px;
   background-image: url("./img/gates.png");
   background-size: cover;
-  background-position: center;
-  
+  background-position: center;  
+}
+.btn.color--ginger{
+  margin-top: auto;
 }
 .footer {
    
@@ -380,7 +427,6 @@ justify-content: center;
   text-decoration: none;
   width: 36px;
   height: 36px;
-  border-radius: 50%;
-   
+  border-radius: 50%;   
 }
 
